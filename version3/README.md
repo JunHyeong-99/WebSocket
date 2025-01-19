@@ -31,6 +31,8 @@ int main() {
     return 0;
 }
 
+```
+
 ### 2. 동시 동작 서버 (Echo 서버)
 
 - **설명**  
@@ -46,6 +48,8 @@ int main() {
 ```c
 int client_cnt = 0;
 printf("Number of service client: %d\n", ++client_cnt);
+
+```
 
 ### 3. `select` 기반 다중 채팅 프로그램
 
@@ -65,3 +69,4 @@ FD_ZERO(&readfds);
 FD_SET(server_fd, &readfds);
 int max_fd = server_fd;
 select(max_fd + 1, &readfds, NULL, NULL, NULL);
+```
